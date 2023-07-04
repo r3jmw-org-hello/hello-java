@@ -1,5 +1,6 @@
 package org.hello.api.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,6 +11,7 @@ public class TestController {
 
     @GetMapping("/test")
     @ResponseBody
+    @Deprecated(since = "release-1.2.0", forRemoval = true)
     public String test() {
         return "test";
     }
@@ -25,5 +27,10 @@ public class TestController {
     @ResponseBody
     public String testException() throws IllegalAccessException {
         throw new IllegalAccessException("Forbidden");
+    }
+
+    @GetMapping(value = "/test", headers = { "X-API-VERSION=v2" })
+    public ResponseEntity<String> testV2() {
+        return ResponseEntity.ok().body("v2");
     }
 }
