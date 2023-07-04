@@ -4,10 +4,19 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/deep-dive" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/deep-dive" />
+            <option value="$PROJECT_DIR$/deep-dive/deep-dive-spring-security" />
             <option value="$PROJECT_DIR$/deep-dive/deep-dive-unit-test" />
           </set>
         </option>
