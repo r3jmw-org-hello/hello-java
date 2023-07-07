@@ -27,6 +27,6 @@ public class GlobalExceptionHandler {
         if (exception instanceof AuthenticationException authenticationException) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(authenticationException.getMessage());
         }
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(exception.getMessage());
     }
 }

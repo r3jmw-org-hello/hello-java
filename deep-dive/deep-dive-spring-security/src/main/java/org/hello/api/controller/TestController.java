@@ -12,8 +12,13 @@ public class TestController {
     @GetMapping("/test")
     @ResponseBody
     @Deprecated(since = "release-1.2.0", forRemoval = true)
-    public String test() {
+    public String test() { // Test
         return "test";
+    }
+
+    @GetMapping(value = "/test", headers = { "X-API-VERSION=v2" })
+    public ResponseEntity<String> testV2() {
+        return ResponseEntity.ok().body("v2");
     }
 
     @GetMapping("/test-auth")
@@ -27,10 +32,5 @@ public class TestController {
     @ResponseBody
     public String testException() throws IllegalAccessException {
         throw new IllegalAccessException("Forbidden");
-    }
-
-    @GetMapping(value = "/test", headers = { "X-API-VERSION=v2" })
-    public ResponseEntity<String> testV2() {
-        return ResponseEntity.ok().body("v2");
     }
 }
