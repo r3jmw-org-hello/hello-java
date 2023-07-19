@@ -55,7 +55,6 @@ services:
       - hello-network
 volumes:
   localstack-data:
-  postgresql-data:
   opensearch-data1:
 networks:
   hello-network:
