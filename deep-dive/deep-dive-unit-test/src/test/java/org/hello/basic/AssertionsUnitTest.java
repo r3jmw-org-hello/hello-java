@@ -23,8 +23,8 @@ class AssertionsUnitTest {
         int[] numbers = {0, 1, 2, 3, 4};
         assertAll("numbers",
                 () -> assertEquals(1, numbers[1]),
-                () -> assertEquals(2, numbers[3]),
-                () -> assertEquals(1, numbers[4])
+                () -> assertEquals(3, numbers[3]),
+                () -> assertEquals(4, numbers[4])
         );
     }
 }
