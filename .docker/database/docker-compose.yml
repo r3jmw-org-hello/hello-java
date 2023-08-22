@@ -2,6 +2,7 @@ version: "3.8"
 services:
   hello-postgres:
     image: postgres:15.3-bookworm
+    container_name: hello-postgres
     restart: always
     ports:
       - "5432:5432"
