@@ -25,7 +25,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/deep-dive" />
+            <option value="$PROJECT_DIR$/deep-dive/deep-dive-jdk" />
             <option value="$PROJECT_DIR$/deep-dive/deep-dive-mybatis" />
+            <option value="$PROJECT_DIR$/deep-dive/deep-dive-openapi" />
             <option value="$PROJECT_DIR$/deep-dive/deep-dive-spring-security" />
             <option value="$PROJECT_DIR$/deep-dive/deep-dive-unit-test" />
           </set>

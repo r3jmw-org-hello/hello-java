@@ -2,4 +2,5 @@ rootProject.name = 'deep-dive'
 include 'deep-dive-unit-test'
 include 'deep-dive-spring-security'
 include 'deep-dive-mybatis'
-
+include 'deep-dive-openapi'
+include 'deep-dive-jdk'
