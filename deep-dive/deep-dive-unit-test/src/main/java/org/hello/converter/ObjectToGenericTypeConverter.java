@@ -9,6 +9,7 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Objects;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, nullValueIterableMappingStrategy = NullValueMappingStrategy.RETURN_DEFAULT)
 public abstract class ObjectToGenericTypeConverter {
@@ -16,7 +17,7 @@ public abstract class ObjectToGenericTypeConverter {
 
 
     @Mapping(target = "id", expression = """
-            java((Long) obj.get("id"))
+            java( java.util.Objects.nonNull(obj.get("id")) ? Long.valueOf(obj.get("id").toString()): null)
             """)
     @Mapping(target = "test", expression = """
             java((String) obj.get("test"))
@@ -24,4 +25,6 @@ public abstract class ObjectToGenericTypeConverter {
     abstract TestModel converter(LinkedHashMap<String, Object> obj);
 
     abstract List<TestModel> converter(List<LinkedHashMap<String, Object>> obj);
+
+
 }

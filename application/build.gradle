@@ -1,0 +1,43 @@
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version '3.1.2'
+}
+
+group = 'org.hello'
+version = '0.1-alpha'
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java-library'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencyManagement {
+        dependencies {
+            dependency 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+            dependency 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
+            dependencySet(group: "org.mapstruct", version: "1.5.5.Final") {
+                entry "mapstruct"
+                entry "mapstruct-processor"
+            }
+        }
+    }
+
+    bootJar {
+        enabled = false
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui'
+        compileOnly "org.projectlombok:lombok"
+        annotationProcessor "org.projectlombok:lombok"
+    }
+}
