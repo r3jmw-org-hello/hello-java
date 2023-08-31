@@ -27,3 +27,17 @@ j
 Tdeep-dive/deep-dive-automation-test/src/test/java/org/hello/handler/TestHandler.java,8\9\8984b7faa7b87d5bbb5a43d7eec4382b9a509755
 `
 0deep-dive/deep-dive-automation-test/build.gradle,4\4\44c63bbef4fcba8bc9745bab49ae56b2fc929932
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+r
+Bdeep-dive/deep-dive-automation-test/env/default/default.properties,a\a\aa7ea855d404e4823c7acb33ebbe4ddab26b56bc
+j
+:deep-dive/deep-dive-automation-test/specs/HelloGauge2.spec,b\c\bc80c61219626bb11918c7c974d10cf6900a03b4
+j
+:deep-dive/deep-dive-automation-test/specs/HelloGauge3.spec,2\d\2d6cb750a0a226ad466741d762cc059a16d1c05a
+j
+:deep-dive/deep-dive-automation-test/specs/CommonGauge.spec,2\b\2bd43bca682ba24808790d6c7a880069072abc11
+b
+2deep-dive/gradle/wrapper/gradle-wrapper.properties,8\9\894d584fcbd90d6855cf3890c86a2f850a32ed73
