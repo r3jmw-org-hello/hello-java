@@ -1,0 +1,18 @@
+plugins {
+    id 'org.gauge' version '1.8.0' apply false
+}
+
+apply plugin: 'org.gauge'
+
+dependencies {
+    implementation 'com.thoughtworks.gauge:gauge-java:0.10.2'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
+}
+
+gauge {
+    specsDir = 'specs'
+    inParallel = true
+    nodes = 4
+    tags = 'Test'
+    additionalFlags = '--verbose'
+}
