@@ -16,15 +16,15 @@ public abstract class ObjectToGenericTypeConverter {
     ObjectToGenericTypeConverter instance = Mappers.getMapper(ObjectToGenericTypeConverter.class);
 
 
-    @Mapping(target = "id", expression = """
-            java( java.util.Objects.nonNull(obj.get("id")) ? Long.valueOf(obj.get("id").toString()): null)
-            """)
-    @Mapping(target = "test", expression = """
-            java((String) obj.get("test"))
-            """)
-    abstract TestModel converter(LinkedHashMap<String, Object> obj);
-
-    abstract List<TestModel> converter(List<LinkedHashMap<String, Object>> obj);
+//    @Mapping(target = "id", expression = """
+//            java( java.util.Objects.nonNull(obj.get("id")) ? Long.valueOf(obj.get("id").toString()): null)
+//            """)
+//    @Mapping(target = "test", expression = """
+//            java((String) obj.get("test"))
+//            """)
+//    abstract TestModel converter(LinkedHashMap<String, Object> obj);
+//
+//    abstract List<TestModel> converter(List<LinkedHashMap<String, Object>> obj);
 
 
 }
