@@ -7,3 +7,5 @@ include 'deep-dive-jdk'
 include 'deep-dive-automation-test'
 include 'deep-dive-spring-webflux'
 include 'deep-dive-playground'
+include 'deep-dive-spring-boot'
+
