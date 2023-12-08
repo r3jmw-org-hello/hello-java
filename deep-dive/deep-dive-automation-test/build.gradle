@@ -1,4 +1,9 @@
 dependencies {
     implementation 'com.thoughtworks.gauge:gauge-java:0.10.2'
     implementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
+
+    compileOnly "org.projectlombok:lombok"
+    testCompileOnly "org.projectlombok:lombok"
+    annotationProcessor "org.projectlombok:lombok"
+    testAnnotationProcessor 'org.projectlombok:lombok'
 }
